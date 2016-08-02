@@ -86,6 +86,7 @@ add_action( 'widgets_init', 'wpbootscore_widgets_init' );
 function wpbootscore_scripts() {
 
 	wp_enqueue_style('wpbootscore-bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css');
+	wp_enqueue_style('wpbootscore-fontawesome', get_template_directory_uri() . '/css/font-awesome.min.css');
 	
 	wp_enqueue_style( 'wpbootscore-style', get_stylesheet_uri() );
 
