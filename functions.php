@@ -122,3 +122,8 @@ require get_template_directory() . '/inc/extras.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * navwalker support added.
+ */
+require get_template_directory() . '/inc/wp_bootstrap_navwalker.php';
