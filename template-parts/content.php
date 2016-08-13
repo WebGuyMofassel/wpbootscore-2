@@ -34,6 +34,17 @@
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
 
+			$image_link = get_post_meta($post->ID, 'wpbs_image_link', true);
+
+			var_dump($image_link);
+
+			echo '<a href="'.esc_url($image_link).'">';
+
+			the_post_thumbnail( 'full' );
+
+			echo '</a>';
+			
+
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wpbootscore' ),
 				'after'  => '</div>',
