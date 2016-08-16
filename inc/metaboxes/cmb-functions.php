@@ -17,3 +17,4 @@ if ( file_exists( dirname( __FILE__ ) . '/cmb2/init.php' ) ) {
 require_once dirname( __FILE__ ) . '/cmb-post.php';
 require_once dirname( __FILE__ ) . '/cmb-page.php';
 require_once dirname( __FILE__ ) . '/cmb-service.php';
+require_once dirname( __FILE__ ) . '/cmb-slide.php';

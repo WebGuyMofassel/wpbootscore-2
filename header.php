@@ -53,5 +53,8 @@
 </nav>
 	</header><!-- #masthead -->
 
+    <!-- Slider -->
+    <?php get_template_part('template-parts/tp-slider'); ?>
+
 	<div id="content" class="site-content container">
 		<div class="row">

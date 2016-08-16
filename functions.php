@@ -28,6 +28,9 @@ function wpbootscore_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
+	add_image_size( 'slide_img', 1200, 400, true );
+	
+
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary', 'wpbootscore' ),
@@ -137,7 +140,7 @@ require get_template_directory() . '/inc/metaboxes/cmb-functions.php';
 /**
  * Custom post support
  */
-require get_template_directory().'/inc/custom-post/cp-functions.php';
+require get_template_directory().'/inc/custom-post/cpt-functions.php';
 
 
 
