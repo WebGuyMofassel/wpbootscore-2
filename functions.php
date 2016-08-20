@@ -89,11 +89,22 @@ add_action( 'widgets_init', 'wpbootscore_widgets_init' );
 function wpbootscore_scripts() {
 
 	wp_enqueue_style('wpbootscore-bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css');
+
+	wp_enqueue_style('wpbootscore-owl', get_template_directory_uri() . '/css/owl.carousel.css');
+
+	wp_enqueue_style('wpbootscore-owl-theme', get_template_directory_uri() . '/css/owl.theme.css');
+
 	wp_enqueue_style('wpbootscore-fontawesome', get_template_directory_uri() . '/css/font-awesome.min.css');
 	
 	wp_enqueue_style( 'wpbootscore-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'wpbootscore-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'wpbootscore-owl', get_template_directory_uri() . '/js/owl.carousel.min.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'wpbootscore-mixitup', get_template_directory_uri() . '/js/jquery.mixitup.min.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'wpbootscore-custom', get_template_directory_uri() . '/js/custom.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'wpbootscore-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
@@ -146,3 +157,23 @@ require get_template_directory().'/inc/custom-post/cpt-functions.php';
 
 
 
+// Function 'wpbootscore_insert_portfolio_filter_into_post_class' starts
+function wpbootscore_insert_portfolio_filter_into_post_class($post_classes) {
+
+	$portfolio_filters = get_the_terms( get_the_ID(), 'portfolio-filter' ); 
+	if( !empty($portfolio_filters) ) :
+
+		foreach ($portfolio_filters as $portfolio_filter) {
+			$post_classes[] = $portfolio_filter->slug;
+		}
+	
+	endif;
+
+	return $post_classes;
+
+} 
+// Function 'wpbootscore_insert_portfolio_filter_into_post_class' ends
+
+
+add_filter( 'post_class', 'wpbootscore_insert_portfolio_filter_into_post_class' );
+// Hook into the 'post_class' filter

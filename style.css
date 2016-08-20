@@ -518,3 +518,18 @@ object {
   display: block; }
 
 /*# sourceMappingURL=style.css.map */
+
+/*Portfolio Section CSS*/
+.portfolio-filter ul {
+  width: 100%;
+  text-align: center;
+}
+.portfolio-filter li {
+  display: inline-block;
+  float: none;
+  padding: 10px;
+  cursor: pointer;
+}
+section#portfolio #portfolio-items .portfolio-item{
+  display: none;
+}
