@@ -100,7 +100,7 @@ function wpbootscore_scripts() {
 
 	wp_enqueue_script( 'wpbootscore-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'wpbootscore-owl', get_template_directory_uri() . '/js/owl.carousel.min.js', array(), '20151215', true );
+	wp_enqueue_script( 'wpbootscore-owl', get_template_directory_uri() . '/js/owl.carousel.min.js', array(), '20151215', false );
 
 	wp_enqueue_script( 'wpbootscore-mixitup', get_template_directory_uri() . '/js/jquery.mixitup.min.js', array(), '20151215', true );
 
@@ -152,6 +152,11 @@ require get_template_directory() . '/inc/metaboxes/cmb-functions.php';
  * Custom post support
  */
 require get_template_directory().'/inc/custom-post/cpt-functions.php';
+
+/**
+ * Custom post support
+ */
+require get_template_directory().'/inc/shortcodes/shortcode.php';
 
 
 

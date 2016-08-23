@@ -1,12 +1,17 @@
-[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
-
 wpbootscore
 ===
 
+## Feature list
 
-
-Getting Started
----------------
+* Bootstrap
+* Fontawesome
+* bootsrtap carousel
+* Contact form 7
+* Portfolio using mixitup
+* Brand logo using owl carousel
+* Custom post support
+* CMB2 support
+* Shortcode
 
 
 
