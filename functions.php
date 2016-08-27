@@ -156,7 +156,7 @@ require get_template_directory().'/inc/custom-post/cpt-functions.php';
 /**
  * Custom post support
  */
-require get_template_directory().'/inc/shortcodes/shortcode.php';
+require get_template_directory().'/inc/shortcodes/sc-functions.php';
 
 
 
