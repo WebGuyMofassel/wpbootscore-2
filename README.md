@@ -12,6 +12,7 @@ wpbootscore
 * Custom post support
 * CMB2 support
 * Shortcode
+* Option tree
 
 
 
