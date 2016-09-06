@@ -13,7 +13,26 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
+
+<!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"> -->
+
+<?php $favicon = ot_get_option('site_favicon');  ?>
+<link rel="icon" type="image/png" sizes="16x16" href="<?php echo esc_url($favicon); ?>">
+
 <?php wp_head(); ?>
+
+<style>
+    .navbar-logo > img {
+  height: 60px;
+  width: 200px;
+}
+
+<?php $custom_scripts = ot_get_option('custom_css');
+    echo($custom_scripts);
+ ?>
+</style>
+
 </head>
 
 <body <?php body_class(); ?>>
@@ -31,9 +50,24 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
+      <?php 
+
+        $site_logo = ot_get_option('site_logo');
+
+        if ( $site_logo ) : ?>
+
+        <a class="navbar-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                <img src="<?php echo esc_url( $site_logo ); ?>" alt="<?php bloginfo('name'); ?>">
+            </a>
+
+
+    <?php else : ?>
+
       <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
                 <?php bloginfo('name'); ?>
             </a>
+    <?php endif; ?>
+
     </div>
 
         <?php

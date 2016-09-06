@@ -158,7 +158,10 @@ require get_template_directory().'/inc/custom-post/cpt-functions.php';
  */
 require get_template_directory().'/inc/shortcodes/sc-functions.php';
 
-
+/**
+ * Theme Option Support Added
+ */
+require get_template_directory().'/inc/admin/ot-functions.php';
 
 
 
