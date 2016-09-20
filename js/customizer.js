@@ -11,9 +11,18 @@
 	// Site title and description.
 	wp.customize( 'blogname', function( value ) {
 		value.bind( function( to ) {
-			$( '.site-title a' ).text( to );
+			$( '.navbar-brand' ).text( to );
 		} );
 	} );
+
+	// logo
+	wp.customize( 'your_setting_id', function( value ) {
+		value.bind( function( to ) {
+
+			$( '#logoimg' ).attr( 'src', to );
+		} );
+	} );
+
 	wp.customize( 'blogdescription', function( value ) {
 		value.bind( function( to ) {
 			$( '.site-description' ).text( to );
