@@ -92,15 +92,3 @@
 
 	<div id="content" class="site-content container">
 		<div class="row">
-
-        <?php $your_setting_id = get_theme_mod('your_setting_id'); 
-            
-
-            // if ( $your_setting_id == 'dark' ) {
-            //     echo "I am Dark";
-            // } else {
-            //     echo "I am Light";
-            // }
-        ?>
-
-        <img id="logoimg" src="<?php echo esc_url( $your_setting_id); ?>" alt="Site logo">

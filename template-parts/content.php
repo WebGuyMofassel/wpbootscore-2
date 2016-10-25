@@ -36,8 +36,6 @@
 
 			$image_link = get_post_meta($post->ID, 'wpbs_image_link', true);
 
-			var_dump($image_link);
-
 			echo '<a href="'.esc_url($image_link).'">';
 
 			the_post_thumbnail( 'full' );
